@@ -103,6 +103,7 @@ def uploaded_file(filename):
     myGraph = app.config['GRAPH']
     with myGraph.as_default():
         set_session(mySession)
+        myModel = load_model(ML_MODEL_FILENAME) #Turn on Eager mode
         result = myModel.predict(test_image)
         image_src = "/"+UPLOAD_FOLDER +"/"+filename
         if result[0] < 0.5:
