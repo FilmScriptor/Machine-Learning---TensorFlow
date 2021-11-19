@@ -62,7 +62,8 @@ def build_model ():
     
     model.compile(loss='binary_crossentropy',
                   optimizer='rmsprop',
-                  metrics=['accuracy'])
+                  metrics=['accuracy'],
+                  run_eagerly=True)
     
     return model
 
