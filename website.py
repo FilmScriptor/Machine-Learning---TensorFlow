@@ -109,7 +109,7 @@ def uploaded_file(filename):
         if result[0] < 0.5:
             answer = "<div class='col text-center'><img width='150' height='150' src='"+image_src+"'class='img-thumbnail' /><h4>guess:"+X+" "+str(result[0])+"</h4></div><div class='col'></div><div class='w-100'></div>"
         else: 
-            answer = "<div class='col text-center'><img width='150' height='150' src='"+image_src+"'class='img-thumbnail' /><h4>guess:"+Y+" "+str(result[0])+"</h4></div><div class='col'></div><div class='w-100'></div>"   
+            answer = "<div class='col'></div><div class='col'></div><div class='col text-center'><img width='150' height='150' src='"+image_src+"'class='img-thumbnail' /><h4>guess:"+Y+" "+str(result[0])+"</h4></div><div class='col'></div><div class='w-100'></div>"   
         results.append(answer)
         return render_template('index.html', 
                                myX=X, myY=Y, mySampleX=sampleX, mySampleY=sampleY, 
